@@ -15,8 +15,58 @@ public class CupomFiscal {
 	public static String CNPJ = "42.591.651/0797-34";
 	public static String INSCRICAO_ESTADUAL = "244.898.500.113";
 
+	private static final String ENDLN = System.lineSeparator();
+
 	public static void main(final String[] args) {
 		//Implemente aqui
+
+		if (MUNICIPIO.isBlank()){
+			System.out.print("O campo município do endereço é obrigatório");
+			return;
+		}
+
+		if (CNPJ.isBlank()) {
+			System.out.print("O campo CNPJ da loja é obrigatório");
+			return;
+		}
+
+		if (INSCRICAO_ESTADUAL.isBlank()) {
+			System.out.print("O campo inscrição estadual da loja é obrigatório");
+			return;
+		}
+
+		if (NOME_LOJA.isBlank()) {
+			System.out.print("O campo nome da loja é obrigatório");
+			return;
+		}
+
+		if (LOGRADOURO.isBlank()) {
+			System.out.print("O campo logradouro do endereço é obrigatório");
+			return;
+		}
+
+		if (ESTADO.isBlank()) {
+			System.out.print("O campo estado do endereço é obrigatório");
+			return;
+		}
+
+
+		String numeroStr = NUMERO + "";
+
+		if (NUMERO == 0) {
+			numeroStr = "s/n";
+		}
+		
+
+		String output = NOME_LOJA + ENDLN;
+		output += LOGRADOURO + ", " + numeroStr + " " + COMPLEMENTO + ENDLN;
+		output += BAIRRO + " - " + MUNICIPIO + " - " + ESTADO + ENDLN;
+		output += "CEP:" + CEP + " Tel " + TELEFONE + ENDLN;
+		output += OBSERVACAO + ENDLN;
+		output += "CNPJ: " + CNPJ + ENDLN;
+		output += "IE: " + INSCRICAO_ESTADUAL;
+		
+		System.out.println(output);
 	}
 
 }
