@@ -20,32 +20,32 @@ public class CupomFiscal {
 	public static void main(final String[] args) {
 		//Implemente aqui
 
-		if (MUNICIPIO.isBlank()){
+		if (MUNICIPIO.equals("")){
 			System.out.print("O campo município do endereço é obrigatório");
 			return;
 		}
 
-		if (CNPJ.isBlank()) {
+		if (CNPJ.equals("")) {
 			System.out.print("O campo CNPJ da loja é obrigatório");
 			return;
 		}
 
-		if (INSCRICAO_ESTADUAL.isBlank()) {
+		if (INSCRICAO_ESTADUAL.equals("")) {
 			System.out.print("O campo inscrição estadual da loja é obrigatório");
 			return;
 		}
 
-		if (NOME_LOJA.isBlank()) {
+		if (NOME_LOJA.equals("")) {
 			System.out.print("O campo nome da loja é obrigatório");
 			return;
 		}
 
-		if (LOGRADOURO.isBlank()) {
+		if (LOGRADOURO.equals("")) {
 			System.out.print("O campo logradouro do endereço é obrigatório");
 			return;
 		}
 
-		if (ESTADO.isBlank()) {
+		if (ESTADO.equals("")) {
 			System.out.print("O campo estado do endereço é obrigatório");
 			return;
 		}
